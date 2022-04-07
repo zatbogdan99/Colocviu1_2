@@ -47,12 +47,6 @@ public class Colocviu1_2MainActivity extends AppCompatActivity {
         compute.setOnClickListener(buttonClickListener);
         editText = (EditText) findViewById(R.id.nextTerm);
         textView = (TextView) findViewById(R.id.textView);
-
-//        Intent intent = getIntent();
-//        if (intent != null && intent.getExtras().containsKey("total2")) {
-//            int total = intent.getExtras().getInt("total2");
-//            Toast.makeText(this, "Sum is " + total, Toast.LENGTH_LONG).show();
-//        }
     }
 
     @Override
@@ -73,7 +67,6 @@ public class Colocviu1_2MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (requestCode == 10) {
-//            suma = intent.getExtras().getInt("total");
             Toast.makeText(this, "Suma este : " + intent.getExtras().getInt("total"), Toast.LENGTH_LONG).show();
         }
     }

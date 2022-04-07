@@ -7,14 +7,11 @@ import android.os.Bundle;
 
 public class Colocviu1_2SecondaryActivity extends AppCompatActivity {
 
-    public int findSum(String str)
-    {
+    public int findSum(String str) {
         String temp = "0";
         int sum = 0;
-
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-
             if (Character.isDigit(ch))
                 temp += ch;
             else {
@@ -28,7 +25,6 @@ public class Colocviu1_2SecondaryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_colocviu12_secondary);
 
         Intent intent = getIntent();
         if (intent != null && intent.getExtras().containsKey("total")) {
@@ -37,11 +33,6 @@ public class Colocviu1_2SecondaryActivity extends AppCompatActivity {
             intent.putExtra("total", sum);
             setResult(RESULT_OK, intent);
             finish();
-
-
-//            Intent intent2 = new Intent(getApplicationContext(), Colocviu1_2MainActivity.class);
-//            intent.putExtra("total2", sum);
-//            startActivityForResult(intent, 10);
         }
     }
 }
